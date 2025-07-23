@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Form</title>
+</head>
+<body>
+    <h2>Wildfire Risk Prediction</h2>
+    <form action="/predict" method="POST">
+        <label>Temperature:</label>
+        <input type="number" step="any" name="Temperature" required><br><br>
+
+        <label>Relative Humidity (RH):</label>
+        <input type="number" step="any" name="RH" required><br><br>
+
+        <label>Wind Speed (Ws):</label>
+        <input type="number" step="any" name="Ws" required><br><br>
+
+        <label>Rain:</label>
+        <input type="number" step="any" name="Rain" required><br><br>
+
+        <label>FFMC:</label>
+        <input type="number" step="any" name="FFMC" required><br><br>
+
+        <label>DMC:</label>
+        <input type="number" step="any" name="DMC" required><br><br>
+
+        <label>ISI:</label>
+        <input type="number" step="any" name="ISI" required><br><br>
+
+        <label>Classes:</label>
+        <input type="number" step="any" name="Classes" required><br><br>
+
+        <label>Region:</label>
+        <input type="number" step="any" name="Region" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if results is not none %}
+        <h3>Prediction Result: {{ results }}</h3>
+    {% endif %}
+</body>
+</html>

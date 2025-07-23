@@ -1,0 +1,16 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+scipy
+tensorflow
+keras
+torch
+torchvision
+transformers
+requests
+beautifulsoup4
+flask
+flask-cors
+jupyterlab
